@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIVERS</title>
+
+    <!-- fuentes-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <a href="index.html"><img src="imgs/logo_shivers.png" alt=""></a>
+        <nav class="navbar">
+            <a href="">FECHAS</a>
+            <a href="">MUSICA</a>
+            <a href="">NOSOTROS</a>
+        </nav>
+    </header>
+
+    <div class="cont_cancion">
+
+        <img src="imgs/vinilo.png" id="imagen" alt="">
+
+        <audio src="audio_video/cancionMP3.mp3" id="audio">
+            <source src="audio_video/cancionWAV.wav">
+        </audio>
+
+        <div class="texto_vinilo">
+            <h1>¡Nuevo Tema!</h1>
+            <p>Everything Sucks es el nuevo single de la banda; una oda a toda la mierda que tiene la vida, y que seguro hará las 
+                delicias de los más apocalípticos.  
+
+                <br><br>
+                
+                <b>¡Pasa el ratón por encima del vinilo para escuchar una preview!</b>
+            </p>
+
+        </div>
+
+        
+    </div>
+
+    <div class="cont_video">
+        <video controls autoplay muted loop>
+            <source src="audio_video/Proyecto_video.mp4">
+            <source src="audio_video/Proyecto_video.webm">
+        </video>
+
+    </div>
+
+    <footer>
+        <div class="cont_texto_footer">
+            <h2>Legal</h2>
+            <a href="">Política de privacidad</a>
+            <a href="">Terminos de venta</a>
+            <a href="">Créditos</a>
+        </div>
+
+        <div class="cont_texto_footer">
+            <h2>Sobre SHIVERS</h2>
+            <a href="">Nuestra historia</a>
+            <a href="">Qué hacemos</a>
+
+        </div>
+
+        <div class="iconos">
+
+            <div class="cont_texto_footer">
+                <h2>Shivers</h2>
+                <p>todos los derechos reservados.</p>
+            </div>
+            <a href="" ><img src="iconos/instagram.png" class="icono" alt=""></a>
+            <a href="" class="icono"><img src="iconos/tik-tok.png"  class="icono" alt=""></a>
+            <a href="" class="icono"> <img src="iconos/twitter.png" class="icono" alt=""></a>
+            <a href="" class="icono"><img src="iconos/youtube.png" class="icono" alt=""></a>
+        </div>
+
+    </footer>
+
+    <script>
+        let audio = document.getElementById("audio");
+        let imagen = document.getElementById("imagen");
+
+        imagen.addEventListener("mouseover", ()=> audio.play());
+
+        imagen.addEventListener("mouseleave", () => audio.pause());
+    </script>
+</body>
+</html>
